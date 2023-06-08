@@ -1,0 +1,8 @@
+input <- x[,c("mpg","disp","hp","wt")]
+print(head(input))
+
+
+am.data=glm(formula=mpg~disp+hp+wt, data=input ,family=binomial)
+summary(am.data)
+
+plot(x=x$hp,y=x$wt,main="motor bike and car",col="blue")
